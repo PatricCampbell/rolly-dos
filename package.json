@@ -12,9 +12,12 @@
     "react-test-renderer": "^16.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "cross-env NODE_PATH=src react-scripts start",
+    "test": "cross-env NODE_PATH=src react-scripts test --env=jsdom",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.3"
   }
 }

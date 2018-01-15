@@ -8,17 +8,20 @@ class TodosContainer extends Component {
     super(props)
 
     this.state = {
-      todos: {
-        '1': 'Take out the trash',
-        '2': 'Get a goddamn job you schlub'
-      }
+      todos:
+        [
+          { id: '1', body: 'Take out the trash' },
+          { id: '2', body: 'Get a goddamn job you schlub' }
+        ]
     }
   }
 
   render() {
+    const { todos } = this.state;
+
     return (
       <React.Fragment>
-        <TodosList />
+        <TodosList todos={todos} />
       </React.Fragment>
     );
   }

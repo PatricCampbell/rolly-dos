@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import Header from './header';
 import { shallow } from "enzyme";
 
 it("renders without crashing", () => {
   shallow(<App />);
 });
 
-it("renders the welcome", () => {
+it("renders the header component", () => {
   const wrapper = shallow(<App />);
-  const welcome = <h1>Welcome to RollyDos!</h1>;
-  expect(wrapper.contains(welcome)).toEqual(true);
+  expect(wrapper.contains(<Header />)).toEqual(true);
 });

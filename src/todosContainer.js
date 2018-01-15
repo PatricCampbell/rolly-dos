@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import './todosContainer.css'
 
-import TodoList from 'todoList';
+import TodosList from 'todosList';
 
 class TodosContainer extends Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class TodosContainer extends Component {
   render() {
     return (
       <React.Fragment>
-        <TodoList />
+        <TodosList />
       </React.Fragment>
     );
   }
